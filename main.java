@@ -2,59 +2,68 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Scanner for user input
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object for user input
 
+        // Prompt the user to select between two options (1 = MyCustomStack, 2 = MyCustomQueue)
         System.out.print("Please choose an option (1 = MyCustomStack, 2 = MyCustomQueue): ");
-        int userInput = scanner.nextInt(); // User's input
+        int userInput = scanner.nextInt(); // Read the user's input
 
         switch (userInput) {
             case 1:
-                MyCustomStack<String> stack = new MyCustomStack<>();
+                MyCustomStack<String> stack = new MyCustomStack<>(); // Create an instance of MyCustomStack
 
                 stack.push("Hello"); // Push "Hello" to the stack
 
                 stack.push("World!"); // Push "World!" to the stack
 
-                System.out.println("Top element: " + stack.peek()); // Output: "World!", print the top element of the stack
+                // Print the top element of the stack
+                System.out.println("Top element: " + stack.peek());
 
                 stack.pop(); // Remove the top element of the stack
 
-                System.out.println("New top element: " + stack.peek()); // Output: "Hello", print the new top element of the stack
+                // Print the new top element of the stack
+                System.out.println("New top element: " + stack.peek());
 
-                System.out.println("Is the stack empty? " + stack.isEmpty()); // Output: false, check if the stack is empty
+                // Check if the stack is empty
+                System.out.println("Is the stack empty? " + stack.isEmpty());
 
-                System.out.println("Size of stack: " + stack.size()); // Output: 1, print the size of the stack
+                // Print the size of the stack
+                System.out.println("Size of stack: " + stack.size());
 
                 break;
 
             case 2:
-                MyCustomQueue<String> queue = new MyCustomQueue<>();
+                MyCustomQueue<String> queue = new MyCustomQueue<>(); // Create an instance of MyCustomQueue
 
-                queue.enqueue("Alice"); // Add Alice to the queue
+                // Add elements to the queue
+                queue.enqueue("Alice");
+                queue.enqueue("Bob");
 
-                queue.enqueue("Bob"); // Add Bob to the queue
+                // Print the front element of the queue
+                System.out.println("Front of queue: " + queue.peek());
 
-                System.out.println("Front of queue: " + queue.peek()); // Output: Front of queue: Alice
+                // Print the size of the queue
+                System.out.println("Size of queue: " + queue.size());
 
-                System.out.println("Size of queue: " + queue.size()); // Output: Queue size: 2
+                // Remove an element from the queue
+                System.out.println("Removed from queue: " + queue.dequeue());
 
-                System.out.println("Removed from queue: " + queue.dequeue()); // Output: Removed from queue: Alice
+                // Print the front element of the queue
+                System.out.println("Front of queue: " + queue.peek());
 
-                System.out.println("Front of queue: " + queue.peek()); // Output: Front of queue: Bob
+                // Print the size of the queue
+                System.out.println("Size of queue: " + queue.size());
 
-                System.out.println("Size of queue: " + queue.size()); // Output: Queue size: 1
+                // Add an element to the queue
+                queue.enqueue("Charlie");
 
-                queue.enqueue("Charlie"); // Add Charlie to the queue
+                // Print the size of the queue
+                System.out.println("Size of queue: " + queue.size());
 
-                System.out.println("Size of queue: " + queue.size()); // Output: Queue size: 2
-
-                // Remove all elements from the queue.
+                // Remove all elements from the queue
                 while (!queue.isEmpty()) {
                     System.out.println("Removed from queue: " + queue.dequeue());
                 }
-                // Output:
-                // Removed from queue: Bob
-                // Removed from queue: Charlie
 
                 break;
 
