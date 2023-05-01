@@ -1,5 +1,3 @@
-Sure, here's an example README file for the project:
-
 # Assignment 3
 
 This is a Java project for Assignment 3 of the COMPSCI 101 course. It consists of three classes: MyStack, MyQueue, and Main.
@@ -38,13 +36,3 @@ Once you have Java installed, you can compile and run the Main class using the f
 javac Main.java
 java Main
 ```
-
-## Contributing
-
-If you find any bugs or issues with the code, please open an issue on the GitHub repository: https://github.com/ZhumagaliDastan/assg3/issues
-
-You are also welcome to submit pull requests with improvements or new features.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
